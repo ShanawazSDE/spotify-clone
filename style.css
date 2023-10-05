@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: DM Sans;
+  color: white;
+}
+
+body{
+  margin-bottom: 20vh;
+}
+
+.main-container {
+  display: flex;
+ 
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  flex: 1;
+}
+main {
+  flex: 5;
+  background: linear-gradient(
+    180deg,
+    #222 0%,
+    #1f1f1f 11.64%,
+    #171717 25.66%,
+    #161616 32.94%,
+    #151515 35.98%,
+    #131313 44.89%,
+    #121212 55.22%,
+    #121212 75.34%,
+    #121212 85.45%,
+    rgba(18, 18, 18, 0) 100%
+  );
+  padding: 20px;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+header .container:nth-of-type(3) {
+  flex: 2;
+}
+
+header button,
+header .install-app {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.14px;
+  /* padding: 5px 0px; */
+}
+
+header button img {
+  width: 30px;
+  height: 30px;
+}
+
+header .container-2 .create-playlist-btn img {
+  background-color: white;
+  padding: 10px;
+}
+
+header .container-2 .your-episodes-btn img {
+  border-radius: 5px;
+  background: #004638;
+  padding: 10px;
+}
+
+main .item-1{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.item-1 .button-box{
+    /* margin-right: auto; */
+}
+
+.item-1 .account{
+    /* margin-left: auto; */
+    display: flex;
+   
+    align-items: center;
+    color: white;
+    gap: 5px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 0px 10px 0px 0px;
+}
+
+ main .item-1 .button-box img{
+    background-color: black;
+    padding: 5px;
+    border-radius: 20px; 
+ }
+
+.featured{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(300px,1fr));
+    gap: 10px;
+   
+
+}
+.item-1 + p{
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.14px;
+}
+
+.featured-item{
+    display: flex;
+   
+    width: 300px;
+    height: 100px;
+    background-color: #303030;
+    
+}
+
+
+
+.featured-item p{
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    align-self: center;
+    padding-left: 10px;
+}
+
+.playlistGrid{
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 10px;
+    
+}
+
+.playlistGrid-item{
+    background: #181818;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.musicPlayer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+   
+   
+    padding: 20px;
+    background-color: black;
+    color: white;
+    max-width: 80vw;
+    
+    
+}
+
+.musicPlayer .controls {
+    /* We can add styling specifically for the play/pause, next/prev buttons here */
+
+    display: flex;
+   
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+}
+
+.controls .button-box{
+  display: flex;
+ 
+}
+
+.controls button{
+  background: transparent;
+  border: none;
+}
+
+.musicPlayer .track-info {
+    /* And some styling for the track info here */
+    display: flex;
+   
+    align-items: center;
+    gap: 20px;
+    flex:1;
+
+}
+ .track-info p{
+
+ }
+  .progress-bar {
+    /* And finally some styling for the progress bar */
+ 
+   display: flex;
+  
+   align-items: center;
+   align-self: stretch;
+
+}
+.progress-bar-outer{
+  background: #535353;
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+.progress-bar-inner{
+  width: 60%;
+  height: 100%;
+  background: #C4C4C4;
+  border-radius: 5px;
+}
+.musicPlayer .right-options {
+    /* And some styling for the volume controls */
+  
+    display: flex;
+   
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+}
+.right-options .volume{
+  height: 5px;
+  background-color: #C4C4C4;
+}
+
+.musicPlayer{
+  width: 100%;
+  
+  position: fixed;
+  bottom: 0px;
+  padding: 20px;
+}
+
+.playlistDetail{
+  background: linear-gradient(180deg, #90AEA7 0%, #000 89.7%);
+}
+
+.playlistDetail .header{
+  display: flex;
+ 
+  align-items: flex-end;
+
+}
+
+.playlistDetail .header span{
+  color: #FFF;
+font-family: Circular Std;
+font-size: 90px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+letter-spacing: -1.8px;
+}
+
+
+.playlistDetail .header p{
+  color: #FFF;
+font-family: Circular Std;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 146.9%; /* 20.566px */
+letter-spacing: -0.28px;
+}
+
+.playlistDetail button{
+  background: transparent;
+  margin: 0px 20px;
+
+}
+
+.songs{
+  display: flex;
+ 
+  flex-direction: column;
+  padding: 20px;
+}
+
+.song-item{
+  display: flex;
+ 
+  justify-content: space-between;
+  width: 100%;
+}
+
+.song-item .div-1 .song-name{
+  flex: 1;
+}
+
+.div-1 > *{
+ margin: 0px 10px;
+}
+
+
+.song-item .div-1, .song-item .div-2{
+  display: flex;
+ 
+  align-items: center;
+}
+
+.div-1 img:nth-child(1){
+  width: 10px;
+  height: 10px;
+}
